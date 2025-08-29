@@ -1,0 +1,121 @@
+:root{
+  --bg:#0b0b0b;
+  --panel:#1a1a1a;
+  --accent:#e50914; /* merah */
+  --accent-2:#ffcc00; /* kuning */
+  --muted:#e0e0e0;
+}
+
+/* RESET */
+*{box-sizing:border-box; margin:0; padding:0}
+body{font-family:Arial, sans-serif; background:var(--bg); color:var(--muted); line-height:1.5}
+
+/* HEADER */
+header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 28px;
+  background:linear-gradient(90deg,#0f0f0f,#141414);
+  border-bottom:3px solid var(--accent);
+  position:sticky; top:0; z-index:10;
+}
+header .logo{display:flex; align-items:center; gap:10px}
+header .logo img{height:50px}
+header h1{color:var(--accent-2); font-size:20px; text-transform:uppercase}
+nav ul{display:flex; gap:18px; list-style:none}
+nav a{color:var(--accent); font-weight:bold; text-decoration:none; transition:.2s}
+nav a:hover{color:var(--accent-2)}
+
+/* HERO */
+.hero{
+  min-height:420px;
+  background:url("/assets/hero-car.jpg") center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:40px 20px;
+}
+.hero-inner{
+  background:rgba(0,0,0,0.6); padding:28px; border-radius:12px;
+}
+.hero h2{color:var(--accent-2); font-size:28px; margin-bottom:10px}
+.hero p{margin:12px 0 20px}
+.cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+
+/* BUTTON */
+.btn{
+  background:var(--accent); color:#fff; padding:10px 20px;
+  border-radius:6px; font-weight:bold; text-decoration:none;
+  transition:.2s; border:2px solid transparent;
+}
+.btn:hover{background:var(--accent-2); color:#111}
+.ghost{background:transparent; border-color:var(--accent-2); color:var(--accent-2)}
+
+/* SECTIONS */
+section{padding:56px 18px; text-align:center}
+h2{color:var(--accent); margin-bottom:20px; text-transform:uppercase}
+.container{max-width:1100px; margin:0 auto}
+
+/* PROFIL */
+.profil-grid{display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:20px}
+.profil-card{background:var(--panel); padding:20px; border-radius:10px; width:300px; text-align:left}
+
+/* LAYANAN */
+.layanan-list{display:flex; gap:20px; flex-wrap:wrap; justify-content:center}
+.layanan-card{background:var(--panel); padding:20px; border-radius:10px; width:260px; box-shadow:0 0 10px rgba(229,9,20,0.5)}
+
+/* PRODUK */
+.produk{display:flex; gap:20px; flex-wrap:wrap; justify-content:center}
+.card{background:var(--panel); padding:18px; border-radius:12px; width:230px; box-shadow:0 0 10px rgba(255,204,0,0.4); transition:transform .3s}
+.card:hover{transform:scale(1.05); box-shadow:0 0 15px rgba(229,9,20,0.7)}
+.card img{width:100%; border-radius:8px}
+.card h3{margin:10px 0 5px; color:#fff}
+.card p{color:var(--accent-2); font-weight:bold; margin-bottom:10px}
+
+/* PROYEK TEB */
+.proyek-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.proyek-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--panel);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+  transition: transform 0.3s;
+}
+
+.proyek-card:hover {
+  transform: translateY(-5px);
+}
+
+.proyek-card img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.proyek-info {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.proyek-info h3 {
+  margin: 0 0 10px;
+  color: var(--accent-2);
+}
+
+.proyek-info p {
+  margin-bottom: 15px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
+/* KONTAK */
+#kontak p{margin-bottom:8px}
+
+/* FOOTER */
+footer{background:#111; text-align:center; padding:15px; color:#888; border-top:2px solid var(--accent)}
